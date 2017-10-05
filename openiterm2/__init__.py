@@ -37,3 +37,29 @@ class OpenIterm2(DirectoryPaneCommand):
                     os.system("/usr/bin/osascript '" + DATA_DIRECTORY + "/Plugins/OpeniTerm2/OpeniTerm2.scpt' '" + dirName + "'")
         else:
             show_alert("No directory selected")
+
+class SetOpenIterm2TabOff(DirectoryPaneCommand):
+    def __call__(self):
+        loc = dict()
+        loc['NewTab'] = False
+        save_json("OpenIterm2.json",loc)
+
+class SetOpenIterm2TabOn(DirectoryPaneCommand):
+    def __call__(self):
+        loc = dict()
+        loc['NewTab'] = True
+        save_json("OpenIterm2.json",loc)
+
+class ToggleOpenIterm2Tab(DirectoryPaneCommand):
+    def __call__(self):
+       loc = load_json('OpenIterm2.json')
+       ntab = False
+       if loc is None:
+            jloc = dict()
+            jloc['NewTab'] = False
+            save_json('OpenIterm2.json',jloc)
+       else:
+            ntab = loc['NewTab']
+       loc['NewTab'] = not ntab
+       save_json("OpenIterm2.json",loc)
+

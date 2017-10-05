@@ -8,7 +8,21 @@ After restarting **fman**, you will be able to open the current directory in [iT
 
 ### Usage
 
-Pressing **shift-o** will open the current directory in [iTerm2](https://www.iterm2.com/).
+Pressing **shift-o** will open the current directory in [iTerm2](https://www.iterm2.com/). 
+
+### New Commands
+
+#### Set Open iterm2Tab off
+
+This command turns off tab mode so that a new tab will not be created.
+
+#### Set open iterm2tab on
+
+This command turns on tab mode so that a new tab will be created.
+
+#### Toggle open iterm2tab
+
+This command toggles the tab mode.
 
 ### Features
 
