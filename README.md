@@ -2,7 +2,7 @@
 
 Plugin for [fman.io](https://fman.io) to open the current directory in [iTerm2](https://www.iterm2.com/). This overrides the built-in function for opening the directory in Terminal. You can set a preference for always opening in a new tab or not. If you change the preference file, you have to reload fman to take effect.
 
-Install by uploading "OpeniTerm2" to your [data directory](https://fman.io/docs/customizing-fman)`/Plugins`.
+Install with [fman's built-in command for installing plugins](https://fman.io/docs/installing-plugins).
 
 After restarting **fman**, you will be able to open the current directory in [iTerm2](https://www.iterm2.com/).
 
