@@ -19,6 +19,8 @@ class OpenIterm2(DirectoryPaneCommand):
             fmanvParts = FMAN_VERSION.split('.')
             if fmanvParts[0] == '0':
                 fmanv = int(fmanvParts[1])
+            else:
+                fmanv = int(fmanvParts[0])*10 + int(fmanvParts[1])
         else:
             fmanv = FMAN_VERSION
         selected_files = self.pane.get_selected_files()
@@ -28,6 +30,7 @@ class OpenIterm2(DirectoryPaneCommand):
             dirName = as_human_readable(selected_files[0])
             if os.path.isfile(dirName):
                 dirName = os.path.dirname(dirName)
+            print(fmanv)
             if fmanv > 4:
                 if ntab:
                     os.system("/usr/bin/osascript '" + DATA_DIRECTORY + "/Plugins/Third-party/OpeniTerm2/OpeniTerm2-newtab.scpt' '" + dirName + "'")
